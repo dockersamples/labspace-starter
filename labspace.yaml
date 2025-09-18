@@ -1,0 +1,11 @@
+title: Labspace starter
+description: |
+  A basic template for creating a Labspace, including all of the boilerplate needed to write and publish a Labspace.
+
+sections:
+  - title: Introduction
+    contentPath: .labspace/01-introduction.md
+  - title: Main Content 1
+    contentPath: .labspace/02-main-content.md
+  - title: Conclusion
+    contentPath: .labspace/03-conclusion.md
