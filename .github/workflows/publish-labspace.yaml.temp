@@ -31,5 +31,3 @@ jobs:
       - name: Publish Compose file
         run: |
           docker compose -f oci://dockersamples/labspace -f .labspace/compose.override.yaml publish ${DOCKERHUB_REPO} --with-env -y
-        env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
