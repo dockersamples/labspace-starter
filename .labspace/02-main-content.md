@@ -47,3 +47,22 @@ Nulla eget nisl odio. Vestibulum enim nibh, varius id venenatis euismod, lacinia
 
 :tabLink[This link]{href="http://localhost:3000" title="Web app"} will go to localhost:3000 (which obviously won't run right now), but open in a new tab here in the interface.
 
+
+
+## Custom variables
+
+Labspaces provide the ability for an author to request a value for a variable and then have that value be replaced in both interface display and interactive elements (code execution, file saving, etc.)
+
+To define a variable, use the `::variableDefinition` directive. The portion inside the square brackets defines the name of the variable and the `prompt` is used in the request to the user.
+
+As an example, the following directive usage will create a variable named `username` after prompting the user "What is your Docker username?"
+
+    ::variableDefinition[username]{prompt="What is your Docker username?"}
+
+To use the variable, wrap the variable with `$$`. For example, the following would display the previously defined variable:
+
+    ```bash
+    docker build -t $$username$$/my-first-website .
+    ```
+
+If the variable has no value, the displayed value reverts to displaying the name of the variable.
