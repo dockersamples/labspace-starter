@@ -23,6 +23,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Publish Labspace
-        uses: dockersamples/publish-labspace-action@6d55204848c70c76b7df17f8c8fb20c2b24a8b00 @ v2.0.0
+        uses: dockersamples/publish-labspace-action@6d55204848c70c76b7df17f8c8fb20c2b24a8b00 # v2.0.0
         with:
           target_repo: ${{ env.DOCKERHUB_REPO }}
